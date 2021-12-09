@@ -1,1 +1,60 @@
-/*Maak hier jouw CSS!*/
+/*Dit is de mobiele grid*/
+.container {
+    background-color: hsl(33, 100%, 93%);
+    display: grid;
+    row-gap: 4px;
+    column-gap: 4px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto repeat(5, 50px);
+    grid-template-areas:
+            "item-a"
+            "item-b"
+            "item-c"
+            "item-d"
+            "item-e"
+            "."
+            "item-f";
+}
+.grid-item {
+    background-color: hsl(356, 52%, 48%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#item-a {
+    grid-area: item-a;
+}
+#item-b {
+    grid-area: item-b;
+}
+#item-c {
+    grid-area: item-c;
+}
+#item-d {
+    grid-area: item-d;
+}
+#item-e {
+    grid-area: item-e;
+}
+#item-f {
+    grid-area: item-f;
+}
+
+@media screen and (min-width: 576px) {
+    /*Dit is de dekstop grid*/
+    .container {
+        background-color: hsl(33, 100%, 93%);
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 175px 100px auto 50px;
+        grid-template-areas:
+            "item-a item-c item-c"
+            "item-b item-c item-c"
+            "item-b item-e item-d"
+            "item-b item-e ."
+            "item-f item-f item-f";
+}
+
+}
